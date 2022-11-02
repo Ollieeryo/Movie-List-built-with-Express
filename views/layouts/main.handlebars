@@ -1,0 +1,29 @@
+{{!-- 之所以會取名叫做 main.handlebars 是因為先前在 app.js 設定樣板引擎時，就已經透過 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
+宣告預設請用名為 main.handlebars 這支檔案當作佈局。 --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- link css files here -->
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+  <title>Movie list</title>
+</head>
+<body>
+  <!-- navigation -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Movie List</a>
+    </div>
+  </nav>
+
+  <!-- partial templates will replace the part of "body" here -->
+  {{!-- 這裡用 {{{ body }}} 的意思，就是會把局部樣板的內容都放在這裡顯示 --}}
+  {{{ body }}}
+
+  <!-- include javascript files here -->
+  <script src="/javascripts/popper.js"></script>
+  <script src="/javascripts/bootstrap.js"></script>
+</body>
+</html>
